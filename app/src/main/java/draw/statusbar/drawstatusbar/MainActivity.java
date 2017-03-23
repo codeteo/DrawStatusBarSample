@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout frameLayout;
     Button btnChangeFragment;
 
+    private boolean isSecondScreenDisplayed = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         btnChangeFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isSecondScreenDisplayed = true;
+
                 getFragmentManager().beginTransaction()
                         .replace(R.id.fl_container, SecondFragment.newInstance())
                         .commit();
@@ -34,4 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        if (isSecondScreenDisplayed) {
+            isSecondScreenDisplayed = false;
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.fl_container, FirstFragment.newInstance())
+                    .commit();
+        } else {
+            super.onBackPressed();
+        }
+
+    }
 }

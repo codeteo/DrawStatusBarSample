@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DrawStatusBar</string>
+    <string name="go_to_secondfragment">GoTo SecondFragment</string>
 </resources>

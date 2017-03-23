@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 
 /**
- * Created by css on 3/23/17.
+ * Screen that draws behind status bar.
  */
 
 public class FirstFragment extends Fragment {

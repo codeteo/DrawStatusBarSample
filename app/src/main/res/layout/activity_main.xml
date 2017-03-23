@@ -15,7 +15,7 @@
 
     <Button
         android:id="@+id/btn_change"
-        android:text="GoTo SecondFragment"
+        android:text="@string/go_to_secondfragment"
         android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
 </LinearLayout>
